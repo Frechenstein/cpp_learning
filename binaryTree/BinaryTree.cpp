@@ -1,5 +1,6 @@
 #include "BinaryTree.h"
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -27,9 +28,60 @@ void BinaryTree::inorder() const {
 }
 
 void BinaryTree::inorder(Node* node) const {
-    if (node != nullptr) {
+    if(node != nullptr) {
         inorder(node->left);
         cout << node->data << " ";
         inorder(node->right);
     }
+}
+
+void BinaryTree::preorder() const {
+    preorder(root);
+    cout << endl;
+}
+
+void BinaryTree::preorder(Node* node) const {
+    if(node != nullptr) {
+        cout << node->data << " ";
+        preorder(node->left);
+        preorder(node->right);
+    }
+}
+
+void BinaryTree::postorder() const {
+    postorder(root);
+    cout << endl;
+}
+
+void BinaryTree::postorder(Node* node) const {
+    if(node != nullptr) {
+        postorder(node->left);
+        postorder(node->right);
+        cout << node->data << " ";
+    }
+}
+
+void BinaryTree::levelorder() const {
+    if(root == nullptr) {
+        return;
+    }
+
+    queue<Node*> q;
+    q.push(root);
+
+    while(!q.empty()) {
+        Node* current = q.front();
+        q.pop();
+
+        cout << current->data << " ";
+
+        if(current->left != nullptr) {
+            q.push(current->left);
+        }
+        if(current->right != nullptr) {
+            q.push(current->right);
+        }
+    }
+
+    cout << endl;
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include "../sortingAlgorithm/Sorter.h"
 
 using namespace std;
 
@@ -87,6 +88,36 @@ int mostCommonNaive(vector<int>& arr) {
     return res;
 };
 
+int mostCommonSorted(vector<int>& arr) {
+    auto start = chrono::high_resolution_clock::now();
+
+    Sorter sorter;
+    sorter.quickSort(arr);
+
+    int max_count = 1;
+    int res = arr[0];
+    int curr_count = 1;
+
+    for(int i = 1; i < arr.size(); i++) {
+        if(arr[i] == arr[i - 1]) curr_count++;
+        else curr_count = 1;
+
+        if (curr_count > max_count) {
+            max_count = curr_count;
+            res = arr[i - 1];
+        }
+    }
+
+    auto end = chrono::high_resolution_clock::now();
+    double duration = chrono::duration_cast<chrono::nanoseconds>(end-start).count();
+    duration *= 1e-9;
+
+    cout << "The most common element is: " << res << endl;
+    cout << "Time elapsed: " << duration << endl;
+    cout << endl;
+    return res;
+};
+
 /**
  * Prints all elements of an vector.
  */
@@ -102,6 +133,7 @@ int main() {
 
     vector<int> arr1 = {2, 2, 3, 4, 2, 2, 2, 5, 2, 3, 4, 2, 5};
     vector<int> arr2 = {7, 5, 7, 5, 8, 6, 4, 3, 6, 3, 7, 2, 9};
+    vector<int> arr3 = {2, 3, 5, 4, 6, 5, 7, 8, 5, 9, 9, 1, 5};
 
     cout << endl;
 
@@ -110,6 +142,9 @@ int main() {
 
     printVector(arr2);
     mostCommonNaive(arr2);
+
+    printVector(arr3);
+    mostCommonSorted(arr3);
 
 
     return 0;
