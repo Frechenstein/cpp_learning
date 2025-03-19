@@ -1,0 +1,11 @@
+Current functions of BinaryTree:
+- insert an element
+- search for an element
+- go through tree with inorder, preorder, postorder and levelorder traversal
+- print a rough structure of the tree
+
+Unfinished functions:
+- remove an element (not working properly - changes trees values improperly)
+
+Missing functions:
+- reorganize tree

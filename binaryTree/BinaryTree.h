@@ -8,7 +8,10 @@ class BinaryTree {
         Node* root;
 
         void insert(Node*& node, int value);
+        Node* remove(Node* node, int value);
         Node* search(Node* node, int value) const;
+
+        Node* getSuccessor(Node* node);
 
         void inorder(Node* node) const;
         void preorder(Node* node) const;

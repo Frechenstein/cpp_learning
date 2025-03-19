@@ -57,5 +57,11 @@ int main() {
     }
     cout << endl;
 
+    // removal of elements currently not workling
+    /*
+    tree.remove(15);
+    tree.printTree();
+    */
+
     return 0;
 }

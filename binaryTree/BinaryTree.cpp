@@ -22,6 +22,45 @@ void BinaryTree::insert(Node*& node, int value) {
     }
 }
 
+void BinaryTree::remove(int value) {
+    remove(root, value);
+}
+
+Node* BinaryTree::remove(Node* node, int value) {
+    if(node == nullptr) {
+        return node; 
+    }
+
+    if(value < node->data) {
+        node->left = remove(node->left, value);
+    } else if(value > node->data) {
+        node->right = remove(node->left, value);
+    } else {
+
+        if(node->left == nullptr) {
+            return node->right;
+        }
+
+        if(node->right == nullptr) {
+            return node->left;
+        }
+
+        Node* succ = getSuccessor(node);
+        node->data = succ->data;
+        node->right = remove(node->right, succ->data);
+
+    }
+    return node;
+}
+
+Node* BinaryTree::getSuccessor(Node* node) {
+    node = node->right;
+    while(node != nullptr && node->left != nullptr) {
+        node = node->left;
+    }
+    return node;
+}
+
 Node* BinaryTree::search(int value) const {  
     return search(root, value);
 }
