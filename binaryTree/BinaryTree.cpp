@@ -22,6 +22,32 @@ void BinaryTree::insert(Node*& node, int value) {
     }
 }
 
+Node* BinaryTree::search(int value) const {  
+    return search(root, value);
+}
+
+Node* BinaryTree::search(Node* node, int value) const {
+    if(node != NULL) {
+        if(node->data == value) {
+            return node;
+        } else if(value < node->data) {
+            return search(node->left, value);
+        } else if (value > node->data) {
+            return search(node->right, value);
+        }
+    } else {
+        return NULL;
+    }
+}
+
+bool BinaryTree::isValuePresent(Node* node) const {
+    if(node != NULL) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 void BinaryTree::inorder() const {
     inorder(root);
     cout << endl;
@@ -84,4 +110,47 @@ void BinaryTree::levelorder() const {
     }
 
     cout << endl;
+}
+
+void BinaryTree::printTree() const {
+    if(root == nullptr) {
+        cout << "Tree is empty!" << endl;
+        return;
+    }
+
+    cout << "The tree looks like this: " << endl;
+
+    queue<Node*> q;
+    q.push(root);
+    int defLineCounter = 1;
+    int lineCounter = defLineCounter;
+
+    while(!q.empty()) {
+        Node* current = q.front();
+        q.pop();
+        defLineCounter--;
+        lineCounter--;
+
+        cout << current->data << " ";
+
+        if(lineCounter == 0) {
+            cout << endl;
+        }
+
+        if(current->left != nullptr) {
+            q.push(current->left);
+            defLineCounter++;
+        }
+        if(current->right != nullptr) {
+            q.push(current->right);
+            defLineCounter++;
+        }
+
+        if(lineCounter == 0) {
+            lineCounter = defLineCounter;
+        }
+    }
+
+    cout << endl;
+
 }
