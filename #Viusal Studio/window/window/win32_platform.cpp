@@ -19,7 +19,7 @@ bool running = true;
 * - Window is active/inactive
 */
 LRESULT CALLBACK window_callback(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
-	LRESULT result;
+	LRESULT result = 0;
 	switch (uMsg) {
 		case WM_CLOSE:
 		case WM_DESTROY: {

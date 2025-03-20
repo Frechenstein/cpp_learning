@@ -1,3 +1,1 @@
-﻿  win32_platform.cpp
-C:\GitHub\C++\cpp_learning\#Viusal Studio\window\window\win32_platform.cpp(39,5): warning C4007: "WinMain": "__stdcall" muss angegeben werden
-  window.vcxproj -> C:\GitHub\C++\cpp_learning\#Viusal Studio\window\Debug\window.exe
+﻿  window.vcxproj -> C:\GitHub\C++\cpp_learning\#Viusal Studio\window\Debug\window.exe
