@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include "utils.cpp"
 
 /*
 Wichtig ist noch zu ändern, dass es sich nicht um ein Konsolen Programm handelt, sondern um eine grafische Applikation:
@@ -8,7 +9,22 @@ Wichtig ist noch zu ändern, dass es sich nicht um ein Konsolen Programm handelt,
 - SubSystem von 'Console' zu 'Window' ändern
 */
 
-bool running = true;
+global_variable bool running = true;
+
+struct Render_State {
+	int width;
+	int height;
+	
+	void* memory;
+
+	BITMAPINFO bitmapinfo;
+};
+
+global_variable Render_State render_state;
+
+#include "platform_common.cpp"
+#include "renderer.cpp"
+#include "simulate.cpp"
 
 /**
 * Die Callback function wird von Windows genutzt um uns Nachrichtigen weiterzugeben wenn etwas wichtiges mit unseren Window passiert:
@@ -25,6 +41,26 @@ LRESULT CALLBACK window_callback(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPa
 		case WM_DESTROY: {
 			running = false;
 		} break;
+
+		case WM_SIZE: {
+			RECT rect;
+			GetClientRect(hwnd, &rect);
+			render_state.width = rect.right - rect.left;
+			render_state.height = rect.bottom - rect.top;
+
+			int buffer_size = render_state.width * render_state.height * sizeof(unsigned int);
+
+			if (render_state.memory) VirtualFree(render_state.memory, 0, MEM_RELEASE);
+			render_state.memory = VirtualAlloc(0, buffer_size, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+
+			render_state.bitmapinfo.bmiHeader.biSize = sizeof(render_state.bitmapinfo.bmiHeader);
+			render_state.bitmapinfo.bmiHeader.biWidth = render_state.width;
+			render_state.bitmapinfo.bmiHeader.biHeight = render_state.height;
+			render_state.bitmapinfo.bmiHeader.biPlanes = 1;
+			render_state.bitmapinfo.bmiHeader.biBitCount = 32;
+			render_state.bitmapinfo.bmiHeader.biCompression = BI_RGB;
+
+		}	
 		
 		default: {
 			result = DefWindowProc(hwnd, uMsg, wParam, lParam);
@@ -65,25 +101,75 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 	Menu													// definiert das Menü. Gibt es keins, ist dieser Wert 0/NULL
 	Instance												// instanz in welcher das Fenster läuft - wert den man aus dem Entry-point erhält
 	pParam													// vorerst nicht relevant - siehe documentation
-
 	*/
 	HWND window = CreateWindow(window_class.lpszClassName, L"Sample Window", WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 1280, 720, 0, 0, hInstance, 0);
+	HDC hdc = GetDC(window);
+
+	#define process_button(b, vk)\
+	case vk: {\
+	input.buttons[b].is_down = is_down;\
+	input.buttons[b].changed = true;\
+	} break;
+
+	Input input = {};
+
+	float delta_time = 0.016666f;
+	LARGE_INTEGER frame_begin_time;
+	QueryPerformanceCounter(&frame_begin_time);
+
+	float performance_frequency;
+	{
+		LARGE_INTEGER perf;
+		QueryPerformanceFrequency(&perf);
+		performance_frequency = (float)perf.QuadPart;
+	}
 
 	// window loop
 	while (running) {
 
 		// Input
 		MSG message;
+
+		for (int i = 0; i < BUTTON_COUNT; i++) {
+			input.buttons[i].changed = false;
+		}
+
 		while (PeekMessage(&message, window, 0, 0, PM_REMOVE)) {
-			TranslateMessage(&message);
-			DispatchMessage(&message);
+
+			switch (message.message) {
+				case WM_KEYUP:
+				case WM_KEYDOWN: {
+					u32 vk_code = (u32)message.wParam;
+					bool is_down = (message.message == WM_KEYDOWN); // '(message.lParam & (1 << 32)) == 0' anstatt 'message.message == WM_KEYDOWN'
+
+					switch (vk_code) {
+						process_button(BUTTON_UP, VK_UP);
+						process_button(BUTTON_DOWN, VK_DOWN);
+						process_button(BUTTON_LEFT, VK_LEFT);
+						process_button(BUTTON_RIGHT, VK_RIGHT);
+					} break;
+
+				} break;
+			
+			
+				default:
+					TranslateMessage(&message);
+					DispatchMessage(&message);
+			}
 		}
 
 		// Simulate
+		simulate(&input, delta_time);
+		
 
 		// Render
+		StretchDIBits(hdc, 0, 0, render_state.width, render_state.height, 0, 0, render_state.width, render_state.height, render_state.memory, &render_state.bitmapinfo, DIB_RGB_COLORS, SRCCOPY);
 
 
+		LARGE_INTEGER frame_end_time;
+		QueryPerformanceCounter(&frame_end_time);
+		delta_time = (float)(frame_end_time.QuadPart - frame_begin_time.QuadPart) / performance_frequency;
+		frame_begin_time = frame_end_time;
 	}
 
 

@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\simulate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|solutionrelative:window\\simulate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\win32_platform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|solutionrelative:window\\win32_platform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\platform_common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|solutionrelative:window\\platform_common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|solutionrelative:window\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B5E93467-150C-4854-AB73-D17A1CDD345C}|window\\window.vcxproj|solutionrelative:window\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "utils.cpp",
+              "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\utils.cpp",
+              "RelativeDocumentMoniker": "window\\utils.cpp",
+              "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\utils.cpp",
+              "RelativeToolTip": "window\\utils.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T14:48:17.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "renderer.cpp",
+              "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\renderer.cpp",
+              "RelativeDocumentMoniker": "window\\renderer.cpp",
+              "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\renderer.cpp",
+              "RelativeToolTip": "window\\renderer.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-21T18:42:09.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "platform_common.cpp",
+              "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\platform_common.cpp",
+              "RelativeDocumentMoniker": "window\\platform_common.cpp",
+              "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\platform_common.cpp",
+              "RelativeToolTip": "window\\platform_common.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T15:19:21.131Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "simulate.cpp",
+              "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\simulate.cpp",
+              "RelativeDocumentMoniker": "window\\simulate.cpp",
+              "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\simulate.cpp",
+              "RelativeToolTip": "window\\simulate.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T15:29:32.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "win32_platform.cpp",
               "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\win32_platform.cpp",
               "RelativeDocumentMoniker": "window\\win32_platform.cpp",
               "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\window\\window\\win32_platform.cpp",
               "RelativeToolTip": "window\\win32_platform.cpp",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwBUAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-20T13:35:10.824Z",
+              "WhenOpened": "2025-03-21T10:45:13.158Z",
               "EditorCaption": ""
             }
           ]
