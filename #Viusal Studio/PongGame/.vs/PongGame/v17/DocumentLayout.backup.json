@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|solutionrelative:PongGame\\win32_platform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|solutionrelative:PongGame\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|solutionrelative:PongGame\\renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8DDB2A24-EC35-4418-9D42-C21AEA098E91}|PongGame\\PongGame.vcxproj|solutionrelative:PongGame\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "win32_platform.cpp",
+              "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\win32_platform.cpp",
+              "RelativeDocumentMoniker": "PongGame\\win32_platform.cpp",
+              "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\win32_platform.cpp",
+              "RelativeToolTip": "PongGame\\win32_platform.cpp",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-21T10:23:35.658Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -40,9 +53,10 @@
               "RelativeDocumentMoniker": "PongGame\\platform_common.cpp",
               "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\platform_common.cpp",
               "RelativeToolTip": "PongGame\\platform_common.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-26T17:31:16.434Z"
+              "WhenOpened": "2025-03-26T17:31:16.434Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,14 +66,14 @@
               "RelativeDocumentMoniker": "PongGame\\simulate_game.cpp",
               "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\simulate_game.cpp",
               "RelativeToolTip": "PongGame\\simulate_game.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAF8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-26T17:30:52.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "utils.cpp",
               "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\utils.cpp",
               "RelativeDocumentMoniker": "PongGame\\utils.cpp",
@@ -71,27 +85,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "renderer.cpp",
               "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\renderer.cpp",
               "RelativeDocumentMoniker": "PongGame\\renderer.cpp",
               "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\renderer.cpp",
               "RelativeToolTip": "PongGame\\renderer.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-26T17:29:53.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "win32_platform.cpp",
-              "DocumentMoniker": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\win32_platform.cpp",
-              "RelativeDocumentMoniker": "PongGame\\win32_platform.cpp",
-              "ToolTip": "C:\\GitHub\\C\u002B\u002B\\cpp_learning\\#Viusal Studio\\PongGame\\PongGame\\win32_platform.cpp",
-              "RelativeToolTip": "PongGame\\win32_platform.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEsAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-21T10:23:35.658Z"
             }
           ]
         }

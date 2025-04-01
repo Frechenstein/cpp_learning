@@ -111,8 +111,8 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 				switch (vk_code) {
 					process_button(BUTTON_UP, VK_UP);
 					process_button(BUTTON_DOWN, VK_DOWN);
-					process_button(BUTTON_LEFT, VK_LEFT);
-					process_button(BUTTON_RIGHT, VK_RIGHT);
+					process_button(BUTTON_W, 'W');
+					process_button(BUTTON_S, 'S');
 				} break;
 
 			} break;
