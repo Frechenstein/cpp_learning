@@ -28,7 +28,22 @@ C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\renderer.cpp(49,9): 
 C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\renderer.cpp(50,9): warning C4244: "Initialisierung": Konvertierung von "float" in "int", möglicher Datenverlust
   (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
   
-C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(8,1): warning C4091: "static ": Ignoriert auf der linken Seite von "int", wenn keine Variable deklariert wurde
+C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(7,1): warning C4091: "static ": Ignoriert auf der linken Seite von "int", wenn keine Variable deklariert wurde
+  (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
+  
+C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(12,19): warning C4305: "Argument": Verkürzung von "double" in "float"
+  (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
+  
+C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(13,19): warning C4305: "Argument": Verkürzung von "double" in "float"
+  (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
+  
+C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(14,18): warning C4305: "Argument": Verkürzung von "double" in "float"
+  (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
+  
+C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(15,20): warning C4305: "Argument": Verkürzung von "double" in "float"
+  (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
+  
+C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\PongGame\simulate_game.cpp(16,20): warning C4305: "Argument": Verkürzung von "double" in "float"
   (Quelldatei „../../../#Viusal%20Studio/PongGame/PongGame/win32_platform.cpp“ wird kompiliert)
   
   PongGame.vcxproj -> C:\GitHub\C++\cpp_learning\#Viusal Studio\PongGame\x64\Debug\PongGame.exe

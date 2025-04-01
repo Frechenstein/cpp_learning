@@ -73,8 +73,8 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
 	#define process_button(b, vk)\
 	case vk: {\
+	input.buttons[b].changed = is_down != input.buttons[b].is_down;\
 	input.buttons[b].is_down = is_down;\
-	input.buttons[b].changed = true;\
 	} break;
 
 	Input input = {};
